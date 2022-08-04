@@ -1,0 +1,10 @@
+*.swp
+*.lzma
+*.log
+*.mem
+*.pt
+*/sv_srcs/*
+__pycache__/
+env/
+software_model/datasets/
+software_model/data/
