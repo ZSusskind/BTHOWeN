@@ -85,7 +85,7 @@ def parameterized_run(train_inputs, train_labels, val_inputs, val_labels, test_i
 # Use a thermometer encoding with a configurable number of bits per input
 # A thermometer encoding is a binary encoding in which subsequent bits are set as the value increases
 #  e.g. 0000 => 0001 => 0011 => 0111 => 1111
-def binarize_datasets(train_dataset, test_dataset, bits_per_input, train_val_split_ratio=0.9):
+def binarize_datasets(train_dataset, test_dataset, bits_per_input, separate_validation_dset=None, train_val_split_ratio=0.9):
     # Given a Gaussian with mean=0 and std=1, choose values which divide the distribution into regions of equal probability
     # This will be used to determine thresholds for the thermometer encoding
     std_skews = [norm.ppf((i+1)/(bits_per_input+1))
@@ -118,11 +118,17 @@ def binarize_datasets(train_dataset, test_dataset, bits_per_input, train_val_spl
 
     # Creates thermometer encoding
     train_inputs = np.concatenate(train_binarizations, axis=1)
-    split = int(train_val_split_ratio*len(train_inputs))
-    val_inputs = train_inputs[split:]
-    val_labels = train_labels[split:]
-    train_inputs = train_inputs[:split]
-    train_labels = train_labels[:split]
+    if separate_validation_dset is None:
+        separate_validation_dset = (len(train_inputs) > 10000)
+    if separate_validation_dset:
+        split = int(train_val_split_ratio*len(train_inputs))
+        val_inputs = train_inputs[split:]
+        val_labels = train_labels[split:]
+        train_inputs = train_inputs[:split]
+        train_labels = train_labels[:split]
+    else:
+        val_inputs = train_inputs
+        val_labels = train_labels
 
     print("Binarizing test dataset")
     test_inputs = []
@@ -147,6 +153,7 @@ def binarize_datasets(train_dataset, test_dataset, bits_per_input, train_val_spl
     return train_inputs, train_labels, val_inputs, val_labels, test_inputs, test_labels
 
 def get_datasets(dset_name):
+    dset_name = dset_name.lower()
     print(f"Loading dataset ({dset_name})")
     if dset_name == 'mnist':
         train_dataset = dsets.MNIST(
