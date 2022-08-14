@@ -53,7 +53,6 @@ def parameterized_run(train_inputs, train_labels, val_inputs, val_labels, test_i
             max_val = max(max_val, f.data.max())
     print(f"Maximum possible bleach value is {max_val}")
     # Use a binary search-based strategy to find the value of b that maximizes accuracy on the validation set
-    #accuracy = run_inference(val_inputs, val_labels, model, 1); print(accuracy); exit()
     best_bleach = max_val // 2
     step = max(max_val // 4, 1)
     bleach_accuracies = {}
@@ -118,6 +117,14 @@ def binarize_datasets(train_dataset, test_dataset, bits_per_input, separate_vali
 
     # Creates thermometer encoding
     train_inputs = np.concatenate(train_binarizations, axis=1)
+
+    # Ideally, we would perform bleaching using a separate dataset from the training set
+    #  (we call this the "validation set", though this is arguably a misnomer),
+    #  since much of the point of bleaching is to improve generalization to new data.
+    # However, some of the datasets we use are simply too small for this to be effective;
+    #  a very small bleaching/validation set essentially fits to random noise,
+    #  and making the set larger decreases the size of the training set too much.
+    # In these cases, we use the same dataset for training and validation
     if separate_validation_dset is None:
         separate_validation_dset = (len(train_inputs) > 10000)
     if separate_validation_dset:

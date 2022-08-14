@@ -1,0 +1,64 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Wed Nov 17 19:57:45 2021
+| Host         : mario.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_utilization -hierarchical -file new_reports/util_iris.log
+| Design       : device_interface
+| Device       : 7z020clg400-1
+| Design State : Routed
+------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------+---------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|              Instance             |              Module             | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++-----------------------------------+---------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| device_interface                  |                           (top) |         57 |         49 |       8 |    0 |  90 |      0 |      0 |            0 |
+|   (device_interface)              |                           (top) |         11 |          3 |       8 |    0 |   3 |      0 |      0 |            0 |
+|   model                           |                          wisard |         46 |         46 |       0 |    0 |  87 |      0 |      0 |            0 |
+|     discrim0                      |   discriminator__parameterized1 |         11 |         11 |       0 |    0 |  24 |      0 |      0 |            0 |
+|       count                       |                     popcount_10 |         10 |         10 |       0 |    0 |  17 |      0 |      0 |            0 |
+|       filter0                     |    bloom_filter__parameterized4 |          0 |          0 |       0 |    0 |   2 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter     | bloom_filter__parameterized4_11 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter     | bloom_filter__parameterized2_12 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter     | bloom_filter__parameterized2_13 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter     | bloom_filter__parameterized1_14 |          1 |          1 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         (gen_filt_inst[4].filter) | bloom_filter__parameterized1_14 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         lut                       | lookup_table__parameterized1_16 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter     | bloom_filter__parameterized4_15 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|     gen_discriminator[1].discrim  |                   discriminator |          6 |          6 |       0 |    0 |  13 |      0 |      0 |            0 |
+|       count                       |                      popcount_8 |          6 |          6 |       0 |    0 |  10 |      0 |      0 |            0 |
+|       filter0                     |  bloom_filter__parameterized2_9 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter     |                    bloom_filter |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter     |    bloom_filter__parameterized0 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|     gen_discriminator[2].discrim  |   discriminator__parameterized0 |         11 |         11 |       0 |    0 |  20 |      0 |      0 |            0 |
+|       count                       |                        popcount |          7 |          7 |       0 |    0 |  14 |      0 |      0 |            0 |
+|       filter0                     |    bloom_filter__parameterized1 |          1 |          1 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         (filter0)                 |    bloom_filter__parameterized1 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         lut                       |    lookup_table__parameterized1 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter     |    bloom_filter__parameterized3 |          1 |          1 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         (gen_filt_inst[1].filter) |    bloom_filter__parameterized3 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|         lut                       |    lookup_table__parameterized3 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter     |  bloom_filter__parameterized3_5 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter     |  bloom_filter__parameterized1_6 |          0 |          0 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter     |    bloom_filter__parameterized2 |          1 |          1 |       0 |    0 |   1 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter     |  bloom_filter__parameterized1_7 |          1 |          1 |       0 |    0 |   1 |      0 |      0 |            0 |
+|     gen_hash_inst[1].hasher       |                         h3_hash |          2 |          2 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_hash_inst[2].hasher       |                       h3_hash_0 |          3 |          3 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_hash_inst[3].hasher       |                       h3_hash_1 |          2 |          2 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_hash_inst[4].hasher       |                       h3_hash_2 |          2 |          2 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_hash_inst[5].hasher       |                       h3_hash_3 |          2 |          2 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     hasher0                       |                       h3_hash_4 |          4 |          4 |       0 |    0 |   4 |      0 |      0 |            0 |
+|     max                           |                         max_idx |          4 |          4 |       0 |    0 |  11 |      0 |      0 |            0 |
++-----------------------------------+---------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

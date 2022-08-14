@@ -26,7 +26,11 @@ If you'd like to synthesize generated RTL using our Make flow, you'll need a VCS
 ## Creating BTHOWeN Models
 All relevant code lives in the `software_model/` directory. Natively supported datasets are MNIST, Ecoli, Iris, Letter, Satimage, Shuttle, Vehicle, Vowel, and Wine.
 
-`train_swept_models.py` is the primary script for programmatic model sweeping. It allows for specification of Bloom filter and encoding parameters; run with `--help` for more details.
+`train_swept_models.py` is the primary script for programmatic model sweeping. It allows for specification of Bloom filter and encoding parameters; run with `--help` for more details.  
+Example usage: `./train_swept_models.py MNIST --filter_inputs 28 --filter_entries 1024 --filter_hashes 2 --bits_per_input 2`  
+`--filter_inputs`, `--filter_entries`, `--filter_hashes`, and `--bits_per_input` can all be provided with multiple values, in which case all permutations are tried.  
+Run-to-run variation in accuracy is expected, particularly on small models. This is largely a result of the random input mapping.  
+*Note*: Dataset names are not case-sensitive
 
 `evaluate.py` runs inference on a pre-trained model - invocation takes the form `./evaluate.py <model_fname> <dset_name>`.
 
@@ -46,3 +50,10 @@ If `HASH_UNITS` is left as the default (-1), the script will choose the smallest
 
 SystemVerilog sources are generated using the [Mako templating library](https://www.makotemplates.org/) from the `.sv.mako` sources under `rtl/mako_srcs/`, and written under `rtl/sv_srcs/`.
 
+# Replication
+Models with identical sizes to those mentioned in Table 3 of the paper can be trained with:
+    ./train_swept_models.py <Dataset name> --filter_inputs <Bits/Filter>  --filter_entries <Entries/Filter> --filter_hashes <Hashes/Filter> --bits_per_input <Bits/Input>
+Run-to-run variation in input mapping may cause results to not exactly match, particularly on the very small datasets (e.g. Wine). For your convenience, pretrained models identical to those used in the paper are available under `software_model/selected_models/`.
+
+Replicating RTL power/energy results requires a Vivado license. If you encounter timing violations, set `intermediate_buffer = False` on line 19 of `rtl/mako_srcs/hash.sv.mako`; this will insert an additional stage in the pipeline. We needed to do this for our medium and large MNIST models.  
+Since we recognize not everyone has access to Vivado or the desire to manually perform synthesis and generate reports, we provide the reports used in our analysis under `rtl/synthesis_reports`.

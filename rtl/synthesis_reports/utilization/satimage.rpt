@@ -1,0 +1,218 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Sat Nov 20 17:34:37 2021
+| Host         : mario.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_utilization -hierarchical -file new_reports/util_satimage.log
+| Design       : device_interface
+| Device       : 7z020clg400-1
+| Design State : Routed
+------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------+--------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+|               Instance               |             Module             | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++--------------------------------------+--------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+| device_interface                     |                          (top) |       3771 |       3483 |     288 |    0 | 1131 |      0 |      0 |            0 |
+|   (device_interface)                 |                          (top) |        434 |        146 |     288 |    0 |   12 |      0 |      0 |            0 |
+|   model                              |                         wisard |       3337 |       3337 |       0 |    0 | 1119 |      0 |      0 |            0 |
+|     (model)                          |                         wisard |         30 |         30 |       0 |    0 |   17 |      0 |      0 |            0 |
+|     discrim0                         |  discriminator__parameterized4 |         97 |         97 |       0 |    0 |  146 |      0 |      0 |            0 |
+|       (discrim0)                     |  discriminator__parameterized4 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                    popcount_27 |         48 |         48 |       0 |    0 |   73 |      0 |      0 |            0 |
+|       filter0                        | bloom_filter__parameterized142 |          2 |          2 |       0 |    0 |    4 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       | bloom_filter__parameterized128 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       | bloom_filter__parameterized129 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       | bloom_filter__parameterized130 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       | bloom_filter__parameterized131 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       | bloom_filter__parameterized132 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       | bloom_filter__parameterized133 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       | bloom_filter__parameterized134 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       | bloom_filter__parameterized135 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       | bloom_filter__parameterized136 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       | bloom_filter__parameterized137 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        | bloom_filter__parameterized119 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       | bloom_filter__parameterized138 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       | bloom_filter__parameterized139 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       | bloom_filter__parameterized140 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       | bloom_filter__parameterized141 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        | bloom_filter__parameterized120 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        | bloom_filter__parameterized121 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        | bloom_filter__parameterized122 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        | bloom_filter__parameterized123 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        | bloom_filter__parameterized124 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        | bloom_filter__parameterized125 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        | bloom_filter__parameterized126 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        | bloom_filter__parameterized127 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_discriminator[1].discrim     |                  discriminator |         89 |         89 |       0 |    0 |  140 |      0 |      0 |            0 |
+|       (gen_discriminator[1].discrim) |                  discriminator |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                    popcount_26 |         41 |         41 |       0 |    0 |   68 |      0 |      0 |            0 |
+|       filter0                        |  bloom_filter__parameterized22 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       |   bloom_filter__parameterized8 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       |   bloom_filter__parameterized9 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       |  bloom_filter__parameterized10 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       |  bloom_filter__parameterized11 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       |  bloom_filter__parameterized12 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       |  bloom_filter__parameterized13 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       |  bloom_filter__parameterized14 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       |  bloom_filter__parameterized15 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       |  bloom_filter__parameterized16 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       |  bloom_filter__parameterized17 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        |                   bloom_filter |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       |  bloom_filter__parameterized18 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       |  bloom_filter__parameterized19 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       |  bloom_filter__parameterized20 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       |  bloom_filter__parameterized21 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        |   bloom_filter__parameterized0 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        |   bloom_filter__parameterized1 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        |   bloom_filter__parameterized2 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        |   bloom_filter__parameterized3 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        |   bloom_filter__parameterized4 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        |   bloom_filter__parameterized5 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        |   bloom_filter__parameterized6 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        |   bloom_filter__parameterized7 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_discriminator[2].discrim     |  discriminator__parameterized0 |         96 |         96 |       0 |    0 |  140 |      0 |      0 |            0 |
+|       (gen_discriminator[2].discrim) |  discriminator__parameterized0 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                    popcount_25 |         47 |         47 |       0 |    0 |   68 |      0 |      0 |            0 |
+|       filter0                        |  bloom_filter__parameterized46 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       |  bloom_filter__parameterized32 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       |  bloom_filter__parameterized33 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       |  bloom_filter__parameterized34 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       |  bloom_filter__parameterized35 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       |  bloom_filter__parameterized36 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       |  bloom_filter__parameterized37 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       |  bloom_filter__parameterized38 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       |  bloom_filter__parameterized39 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       |  bloom_filter__parameterized40 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       |  bloom_filter__parameterized41 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        |  bloom_filter__parameterized23 |          2 |          2 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       |  bloom_filter__parameterized42 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       |  bloom_filter__parameterized43 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       |  bloom_filter__parameterized44 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       |  bloom_filter__parameterized45 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        |  bloom_filter__parameterized24 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        |  bloom_filter__parameterized25 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        |  bloom_filter__parameterized26 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        |  bloom_filter__parameterized27 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        |  bloom_filter__parameterized28 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        |  bloom_filter__parameterized29 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        |  bloom_filter__parameterized30 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        |  bloom_filter__parameterized31 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_discriminator[3].discrim     |  discriminator__parameterized1 |         89 |         89 |       0 |    0 |  140 |      0 |      0 |            0 |
+|       (gen_discriminator[3].discrim) |  discriminator__parameterized1 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                    popcount_24 |         41 |         41 |       0 |    0 |   68 |      0 |      0 |            0 |
+|       filter0                        |  bloom_filter__parameterized70 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       |  bloom_filter__parameterized56 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       |  bloom_filter__parameterized57 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       |  bloom_filter__parameterized58 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       |  bloom_filter__parameterized59 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       |  bloom_filter__parameterized60 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       |  bloom_filter__parameterized61 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       |  bloom_filter__parameterized62 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       |  bloom_filter__parameterized63 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       |  bloom_filter__parameterized64 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       |  bloom_filter__parameterized65 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        |  bloom_filter__parameterized47 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       |  bloom_filter__parameterized66 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       |  bloom_filter__parameterized67 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       |  bloom_filter__parameterized68 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       |  bloom_filter__parameterized69 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        |  bloom_filter__parameterized48 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        |  bloom_filter__parameterized49 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        |  bloom_filter__parameterized50 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        |  bloom_filter__parameterized51 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        |  bloom_filter__parameterized52 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        |  bloom_filter__parameterized53 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        |  bloom_filter__parameterized54 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        |  bloom_filter__parameterized55 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_discriminator[4].discrim     |  discriminator__parameterized2 |         95 |         95 |       0 |    0 |  140 |      0 |      0 |            0 |
+|       (gen_discriminator[4].discrim) |  discriminator__parameterized2 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                    popcount_23 |         47 |         47 |       0 |    0 |   68 |      0 |      0 |            0 |
+|       filter0                        |  bloom_filter__parameterized94 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       |  bloom_filter__parameterized80 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       |  bloom_filter__parameterized81 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       |  bloom_filter__parameterized82 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       |  bloom_filter__parameterized83 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       |  bloom_filter__parameterized84 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       |  bloom_filter__parameterized85 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       |  bloom_filter__parameterized86 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       |  bloom_filter__parameterized87 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       |  bloom_filter__parameterized88 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       |  bloom_filter__parameterized89 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        |  bloom_filter__parameterized71 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       |  bloom_filter__parameterized90 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       |  bloom_filter__parameterized91 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       |  bloom_filter__parameterized92 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       |  bloom_filter__parameterized93 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        |  bloom_filter__parameterized72 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        |  bloom_filter__parameterized73 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        |  bloom_filter__parameterized74 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        |  bloom_filter__parameterized75 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        |  bloom_filter__parameterized76 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        |  bloom_filter__parameterized77 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        |  bloom_filter__parameterized78 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        |  bloom_filter__parameterized79 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_discriminator[5].discrim     |  discriminator__parameterized3 |         89 |         89 |       0 |    0 |  140 |      0 |      0 |            0 |
+|       (gen_discriminator[5].discrim) |  discriminator__parameterized3 |         24 |         24 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       count                          |                       popcount |         41 |         41 |       0 |    0 |   68 |      0 |      0 |            0 |
+|       filter0                        | bloom_filter__parameterized118 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[10].filter       | bloom_filter__parameterized104 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[11].filter       | bloom_filter__parameterized105 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[12].filter       | bloom_filter__parameterized106 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[13].filter       | bloom_filter__parameterized107 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[14].filter       | bloom_filter__parameterized108 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[15].filter       | bloom_filter__parameterized109 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[16].filter       | bloom_filter__parameterized110 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[17].filter       | bloom_filter__parameterized111 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[18].filter       | bloom_filter__parameterized112 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[19].filter       | bloom_filter__parameterized113 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter        |  bloom_filter__parameterized95 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[20].filter       | bloom_filter__parameterized114 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[21].filter       | bloom_filter__parameterized115 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[22].filter       | bloom_filter__parameterized116 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[23].filter       | bloom_filter__parameterized117 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter        |  bloom_filter__parameterized96 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter        |  bloom_filter__parameterized97 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter        |  bloom_filter__parameterized98 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter        |  bloom_filter__parameterized99 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter        | bloom_filter__parameterized100 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter        | bloom_filter__parameterized101 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter        | bloom_filter__parameterized102 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter        | bloom_filter__parameterized103 |          1 |          1 |       0 |    0 |    3 |      0 |      0 |            0 |
+|     gen_hash_inst[10].hasher         |                        h3_hash |        113 |        113 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[11].hasher         |                      h3_hash_0 |        107 |        107 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[12].hasher         |                      h3_hash_1 |        106 |        106 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[13].hasher         |                      h3_hash_2 |        110 |        110 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[14].hasher         |                      h3_hash_3 |        114 |        114 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[15].hasher         |                      h3_hash_4 |        124 |        124 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[16].hasher         |                      h3_hash_5 |        115 |        115 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[17].hasher         |                      h3_hash_6 |        107 |        107 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[18].hasher         |                      h3_hash_7 |        111 |        111 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[19].hasher         |                      h3_hash_8 |        114 |        114 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[1].hasher          |                      h3_hash_9 |        111 |        111 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[20].hasher         |                     h3_hash_10 |        110 |        110 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[21].hasher         |                     h3_hash_11 |        105 |        105 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[22].hasher         |                     h3_hash_12 |        107 |        107 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[23].hasher         |                     h3_hash_13 |        109 |        109 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[2].hasher          |                     h3_hash_14 |        113 |        113 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[3].hasher          |                     h3_hash_15 |        111 |        111 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[4].hasher          |                     h3_hash_16 |        111 |        111 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[5].hasher          |                     h3_hash_17 |        116 |        116 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[6].hasher          |                     h3_hash_18 |        110 |        110 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[7].hasher          |                     h3_hash_19 |        109 |        109 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[8].hasher          |                     h3_hash_20 |        103 |        103 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     gen_hash_inst[9].hasher          |                     h3_hash_21 |        118 |        118 |       0 |    0 |    9 |      0 |      0 |            0 |
+|     hasher0                          |                     h3_hash_22 |        188 |        188 |       0 |    0 |   12 |      0 |      0 |            0 |
+|     max                              |                        max_idx |         13 |         13 |       0 |    0 |   37 |      0 |      0 |            0 |
++--------------------------------------+--------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

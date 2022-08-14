@@ -1,0 +1,185 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Sat Nov 20 18:10:52 2021
+| Host         : mario.ece.utexas.edu running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_utilization -hierarchical -file new_reports/util_vowel.log
+| Design       : device_interface
+| Device       : 7z020clg400-1
+| Design State : Routed
+------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------------------+--------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|                Instance               |             Module             | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++---------------------------------------+--------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| device_interface                      |                          (top) |       1559 |       1387 |     150 |   22 | 756 |      0 |      0 |            0 |
+|   (device_interface)                  |                          (top) |        225 |         75 |     150 |    0 |   5 |      0 |      0 |            0 |
+|   model                               |                         wisard |       1334 |       1312 |       0 |   22 | 751 |      0 |      0 |            0 |
+|     (model)                           |                         wisard |          9 |          9 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     discrim0                          |  discriminator__parameterized9 |         40 |         38 |       0 |    2 |  59 |      0 |      0 |            0 |
+|       (discrim0)                      |  discriminator__parameterized9 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_18 |         19 |         17 |       0 |    2 |  28 |      0 |      0 |            0 |
+|       filter0                         | bloom_filter__parameterized108 |          2 |          2 |       0 |    0 |   4 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized99 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         | bloom_filter__parameterized100 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         | bloom_filter__parameterized101 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         | bloom_filter__parameterized102 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         | bloom_filter__parameterized103 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         | bloom_filter__parameterized104 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         | bloom_filter__parameterized105 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         | bloom_filter__parameterized106 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         | bloom_filter__parameterized107 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[10].discrim     |  discriminator__parameterized8 |         37 |         35 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[10].discrim) |  discriminator__parameterized8 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_17 |         17 |         15 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized98 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized89 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized90 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized91 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized92 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized93 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized94 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized95 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized96 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized97 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[1].discrim      |                  discriminator |         41 |         39 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[1].discrim)  |                  discriminator |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_16 |         21 |         19 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |   bloom_filter__parameterized8 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |                   bloom_filter |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |   bloom_filter__parameterized0 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |   bloom_filter__parameterized1 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |   bloom_filter__parameterized2 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |   bloom_filter__parameterized3 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |   bloom_filter__parameterized4 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |   bloom_filter__parameterized5 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |   bloom_filter__parameterized6 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |   bloom_filter__parameterized7 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[2].discrim      |  discriminator__parameterized0 |         39 |         37 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[2].discrim)  |  discriminator__parameterized0 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_15 |         19 |         17 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized18 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |   bloom_filter__parameterized9 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized10 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized11 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized12 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized13 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized14 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized15 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized16 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized17 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[3].discrim      |  discriminator__parameterized1 |         41 |         39 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[3].discrim)  |  discriminator__parameterized1 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_14 |         21 |         19 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized28 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized19 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized20 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized21 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized22 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized23 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized24 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized25 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized26 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized27 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[4].discrim      |  discriminator__parameterized2 |         39 |         37 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[4].discrim)  |  discriminator__parameterized2 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_13 |         19 |         17 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized38 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized29 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized30 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized31 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized32 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized33 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized34 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized35 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized36 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized37 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[5].discrim      |  discriminator__parameterized3 |         41 |         39 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[5].discrim)  |  discriminator__parameterized3 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_12 |         21 |         19 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized48 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized39 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized40 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized41 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized42 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized43 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized44 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized45 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized46 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized47 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[6].discrim      |  discriminator__parameterized4 |         41 |         39 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[6].discrim)  |  discriminator__parameterized4 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_11 |         21 |         19 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized58 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized49 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized50 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized51 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized52 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized53 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized54 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized55 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized56 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized57 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[7].discrim      |  discriminator__parameterized5 |         39 |         37 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[7].discrim)  |  discriminator__parameterized5 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                    popcount_10 |         19 |         17 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized68 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized59 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized60 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized61 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized62 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized63 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized64 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized65 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized66 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized67 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[8].discrim      |  discriminator__parameterized6 |         41 |         39 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[8].discrim)  |  discriminator__parameterized6 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                     popcount_9 |         21 |         19 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized78 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized69 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized70 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized71 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized72 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized73 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized74 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized75 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized76 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized77 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_discriminator[9].discrim      |  discriminator__parameterized7 |         39 |         37 |       0 |    2 |  54 |      0 |      0 |            0 |
+|       (gen_discriminator[9].discrim)  |  discriminator__parameterized7 |         10 |         10 |       0 |    0 |   0 |      0 |      0 |            0 |
+|       count                           |                       popcount |         19 |         17 |       0 |    2 |  24 |      0 |      0 |            0 |
+|       filter0                         |  bloom_filter__parameterized88 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[1].filter         |  bloom_filter__parameterized79 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[2].filter         |  bloom_filter__parameterized80 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[3].filter         |  bloom_filter__parameterized81 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[4].filter         |  bloom_filter__parameterized82 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[5].filter         |  bloom_filter__parameterized83 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[6].filter         |  bloom_filter__parameterized84 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[7].filter         |  bloom_filter__parameterized85 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[8].filter         |  bloom_filter__parameterized86 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|       gen_filt_inst[9].filter         |  bloom_filter__parameterized87 |          1 |          1 |       0 |    0 |   3 |      0 |      0 |            0 |
+|     gen_hash_inst[1].hasher           |                        h3_hash |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[2].hasher           |                      h3_hash_0 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[3].hasher           |                      h3_hash_1 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[4].hasher           |                      h3_hash_2 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[5].hasher           |                      h3_hash_3 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[6].hasher           |                      h3_hash_4 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[7].hasher           |                      h3_hash_5 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[8].hasher           |                      h3_hash_6 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     gen_hash_inst[9].hasher           |                      h3_hash_7 |         80 |         80 |       0 |    0 |   8 |      0 |      0 |            0 |
+|     hasher0                           |                      h3_hash_8 |        138 |        138 |       0 |    0 |   9 |      0 |      0 |            0 |
+|     max                               |                        max_idx |         30 |         30 |       0 |    0 |  68 |      0 |      0 |            0 |
++---------------------------------------+--------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
