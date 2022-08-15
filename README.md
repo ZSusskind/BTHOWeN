@@ -21,7 +21,7 @@ From here, dependency installation can be automatically handled with a single co
 pip install -r requirements.txt
 ```
 
-If you'd like to synthesize generated RTL using our Make flow, you'll need a VCS installation and of course a valid license. Point the `VCS_HOME` environment variable to your top-level VCS installation directory (the executable path should be `$(VCS_HOME)/bin/vcs`).
+If you'd like to synthesize generated RTL using our Make flow, you'll need a VCS installation and of course a valid license. Point the `VCS_HOME` environment variable to your top-level VCS installation directory (the executable path should be `$(VCS_HOME)/bin/vcs`). We derived our power and area estimates using Vivado; reports for the provided pre-trained models are available (see below).
 
 ## Creating BTHOWeN Models
 All relevant code lives in the `software_model/` directory. Natively supported datasets are MNIST, Ecoli, Iris, Letter, Satimage, Shuttle, Vehicle, Vowel, and Wine.
@@ -51,9 +51,36 @@ If `HASH_UNITS` is left as the default (-1), the script will choose the smallest
 SystemVerilog sources are generated using the [Mako templating library](https://www.makotemplates.org/) from the `.sv.mako` sources under `rtl/mako_srcs/`, and written under `rtl/sv_srcs/`.
 
 # Replication
-Models with identical sizes to those mentioned in Table 3 of the paper can be trained with:
+## Software Models
+Models with identical sizes to those mentioned in Table 3 of the paper (replicated below) can be trained with:
     ./train_swept_models.py <Dataset name> --filter_inputs <Bits/Filter>  --filter_entries <Entries/Filter> --filter_hashes <Hashes/Filter> --bits_per_input <Bits/Input>
-Run-to-run variation in input mapping may cause results to not exactly match, particularly on the very small datasets (e.g. Wine). For your convenience, pretrained models identical to those used in the paper are available under `software_model/selected_models/`.
+Run-to-run variation in input mapping may cause results to not exactly match, particularly on the very small datasets (e.g. Wine). The pretrained models used in the paper are available under `software_model/selected_models/`.
 
-Replicating RTL power/energy results requires a Vivado license. If you encounter timing violations, set `intermediate_buffer = False` on line 19 of `rtl/mako_srcs/hash.sv.mako`; this will insert an additional stage in the pipeline. We needed to do this for our medium and large MNIST models.  
-Since we recognize not everyone has access to Vivado or the desire to manually perform synthesis and generate reports, we provide the reports used in our analysis under `rtl/synthesis_reports`.
+
+| **Model Name** | **Bits/Input** | **Bits/Filter** | **Entries/Filter** | **Hashes/Filter** | **Size (KiB)** | **Test Accuracy** |
+| --- | --- | --- | --- | --- | --- | --- |
+| MNIST-Small | 2 | 28 | 1024 | 2 | 70.0 | 0.934 |
+| --- | --- | --- | --- | --- | --- | --- |
+| MNIST-Medium | 3 | 28 | 2048 | 2 | 210 | 0.943 |
+| --- | --- | --- | --- | --- | --- | --- |
+| MNIST-Large | 6 | 49 | 8192 | 4 | 960 | 0.952 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Ecoli | 10 | 10 | 128 | 2 | 0.875 | 0.875 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Iris | 3 | 2 | 128 | 1 | 0.281 | 0.980 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Letter | 15 | 20 | 2048 | 4 | 78.0 | 0.900 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Satimage | 8 | 12 | 512 | 4 | 9.00 | 0.880 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Shuttle | 9 | 27 | 1024 | 2 | 2.63 | 0.999 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Vehicle | 16 | 16 | 256 | 3 | 2.25 | 0.762 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Vowel | 15 | 15 | 256 | 4 | 3.44 | 0.900 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Wine | 9 | 13 | 128 | 3 | 0.422 | 0.983 |
+
+## RTL Power and Area
+Replicating RTL power/energy/area results requires a Vivado license. If you encounter timing violations, set `intermediate_buffer = False` on line 19 of `rtl/mako_srcs/hash.sv.mako`; this will insert an additional stage in the pipeline. We needed to do this for our medium and large MNIST models.  
+We also provide the Vivado reports which were used in our analysis under `rtl/synthesis_reports`.
