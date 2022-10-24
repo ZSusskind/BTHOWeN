@@ -3,7 +3,7 @@ Code to accompany the paper:
 
 **Weightless Neural Networks for Efficient Edge Inference**, Zachary Susskind, Aman Arora, Igor Dantas Dos Santos Miranda, Luis Armando Quintanilla Villon, Rafael Fontella Katopodis, Leandro Santiago de Araújo, Diego Leonel Cadette Dutra, Priscila Lima, Felipe Maia Galvão França, Mauricio Breternitz Jr., Lizy John
 
-*To be presented at the 31st International Conference on Parallel Architectures and Compilation Techniques (PACT 2022)*
+*Presented at the 31st International Conference on Parallel Architectures and Compilation Techniques (PACT 2022)*
 
 # Usage
 ## Prerequisites
