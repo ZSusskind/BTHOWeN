@@ -11,6 +11,7 @@ from numpy import flip, log2
 
 build_dirname = os.path.dirname(__file__)
 sv_dirname = os.path.join(build_dirname, "../sv_srcs")
+os.makedirs(sv_dirname, exist_ok=True)
 sys.path.append(os.path.join(build_dirname, "../../software_model"))
 
 parser = argparse.ArgumentParser()
